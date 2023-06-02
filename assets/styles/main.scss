@@ -1,5 +1,8 @@
+@import './fonts';
 @import './vars';
+@import './mixins';
 @import './settings';
+@import './classes';
 
 * {
     box-sizing: border-box;
@@ -21,3 +24,12 @@ body {
     color: $dark-primary;
     background-color: $white;
 }
+
+@import './parts/pages';
+@import './parts/layouts';
+@import './parts/components';
+@import './parts/ui';
+@import './parts/modal-windows';
+
+@import './libs';
+@import './media';

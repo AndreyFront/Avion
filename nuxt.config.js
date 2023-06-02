@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    ssr: true,
+    components: [
+        '~/components',
+        '~/icons',
+        '~/ui',
+    ],
     runtimeConfig: {
         apiSecret: './api',
         public: {
@@ -7,7 +13,7 @@ export default defineNuxtConfig({
         }
     },
     css: [
-        '@/styles/main.scss'
+        '@/assets/styles/main.scss'
     ],
     modules: [
         '@pinia/nuxt',
