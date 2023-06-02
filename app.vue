@@ -6,5 +6,5 @@
 
 <script setup>
 
-  const layout = "default"
+  const layout = ref("default")
 </script>

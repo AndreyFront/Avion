@@ -1,0 +1,9 @@
+.logo {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+
+    &__icon {
+        fill: $dark-logo;
+    }
+}

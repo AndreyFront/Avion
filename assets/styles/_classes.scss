@@ -1,11 +1,11 @@
 @import '_vars';
 @import '_mixins';
 
-.main-container {
+.container {
     width: 100%;
-    max-width: 1440px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 1328px;
+    padding-left: 24px;
+    padding-right: 24px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,6 +20,7 @@
 
 a {
     color: blue;
+    cursor: pointer;
 }
 
 .title-reset {
