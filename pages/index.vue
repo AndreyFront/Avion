@@ -1,6 +1,7 @@
 <template>
     <main class="page main-page">
-        <h1>Main page</h1>
+        <v-performance />
+        <v-advantages />
     </main>
 </template>
 

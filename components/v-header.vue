@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="container">
-            <Logo />
+            <v-logo />
             <nav class="header__nav">
                 <ul class="header__nav-list list-reset">
                     <li class="header__nav-li">

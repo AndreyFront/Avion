@@ -1,0 +1,29 @@
+.social-links {
+    display: grid;
+    align-content: start;
+    grid-row-gap: 22px;
+
+    &__title {
+        font-family: $secon-font, sans-serif;
+        color: $white;
+    }
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 24px;
+    }
+
+    &__link {
+        display: grid;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+    }
+}

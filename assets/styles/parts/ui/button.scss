@@ -1,0 +1,118 @@
+.btn {
+  position: relative;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 8px;
+  width: max-content;
+  height: 56px;
+  padding: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid;
+  border-color: transparent;
+  transition: background-color $transition-time, border-color $transition-time;
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &__name {
+    color: $dark-primary;
+    line-height: 1em;
+    transition: color $transition-time;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    use {
+      stroke-width: 1;
+      transition: stroke $transition-time, fill $transition-time;
+    }
+  }
+
+  &--size--bg {
+    height: 56px;
+    padding: 5px 32px;
+  }
+
+  &--size--md {
+    height: 48px;
+    padding: 5px 24px;
+  }
+
+  &--theme--primary {
+    background-color: $dark-primary;
+
+    &:hover {
+      background-color: $very-dark-primary;
+    }
+
+    &:focus {
+      border-color: $primary;
+      background-color: $primary;
+    }
+
+    .btn__name {
+      color: $white;
+    }
+  }
+
+  &--theme--secondary {
+    background-color: $light-gray;
+
+    &:hover {
+      background-color: $border-gray;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  &--theme--white {
+    background-color: $white;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  &--theme--opaque {
+    background-color: rgba(249, 249, 249, 0.15);
+
+    &:hover {
+      background-color: rgba(249, 249, 249, 0.3);
+    }
+
+    &:focus {
+      border-color: $primary;
+      background-color: rgba(249, 249, 249, 0.15);;
+    }
+
+    .btn__name {
+      color: $white;
+    }
+  }
+
+  &--theme--ghost {
+    background-color: $primary;
+
+    &:hover {
+      background-color: $border-gray;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.advantages {
+    padding: 80px 0;
+
+    &__title.title {
+        margin-bottom: 36px;
+        text-align: center;
+    }
+
+    &__wrap-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 22px;
+    }
+}

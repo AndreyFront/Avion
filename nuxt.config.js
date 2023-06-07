@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     ssr: true,
     components: [
+        '~/sections',
         '~/components',
         '~/icons',
         '~/ui',
@@ -17,5 +18,10 @@ export default defineNuxtConfig({
     ],
     modules: [
         '@pinia/nuxt',
-    ]
+    ],
+    pinia: {
+        autoImports: [
+            'defineStore'
+        ]
+    }
 })

@@ -1,0 +1,40 @@
+.performance {
+    position: relative;
+    height: 704px;
+
+    .container {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: end;
+        height: 100%;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__block-info {
+        display: grid;
+        align-content: space-between;
+        width: 630px;
+        height: 444px;
+        padding: 56px 46px;
+        background-color: $white;
+    }
+
+    &__inner-info {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    &__subtitle {
+        color: $gray;
+    }
+}

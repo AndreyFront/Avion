@@ -11,9 +11,11 @@
     const emit = defineEmits(['isActive']),
     active = ref(false)
 
-    setTimeout(() => {
-        active.value = true
-    }, 1000)
+    // setTimeout(() => {
+    //     active.value = true
+    // }, 1000)
 
-    emit('isActive', active.value)
+    watchEffect(() => {
+        emit('isActive', active.value)
+    })
 </script>

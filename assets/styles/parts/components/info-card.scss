@@ -1,0 +1,12 @@
+.info-card {
+    display: grid;
+    grid-row-gap: 12px;
+    padding: 48px;
+    background-color: $light-gray;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: $dark-primary;
+    }
+}
