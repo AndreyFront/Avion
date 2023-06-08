@@ -1,0 +1,36 @@
+.product {
+    text-decoration: none;
+    color: $dark-primary;
+
+    &:hover &__image {
+        transform: scale(1.1);
+    }
+
+    &__block-image {
+        height: 375px;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform $transition-time;
+    }
+
+    &__block-info {
+        display: grid;
+        grid-row-gap: 8px;
+        margin-top: 24px;
+    }
+
+    &__name {
+        font-family: $secon-font, sans-serif;
+        font-size: 20px;
+    }
+
+    &__price {
+        font-size: 18px;
+    }
+}

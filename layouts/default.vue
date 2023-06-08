@@ -25,8 +25,16 @@
         }
     })
 
-    onMounted(() => {
+    function setIndent() {
         const page = document.querySelector('.page')
         page.style.paddingTop = `${header.value.$el.offsetHeight}px`
+    }
+
+    onMounted(() => {
+        setIndent()
+    })
+
+    onUpdated(() => {
+        setIndent()
     })
 </script>

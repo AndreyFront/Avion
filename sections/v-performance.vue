@@ -17,7 +17,6 @@
     const router = useRouter()
 
     function getDataButton(data) {
-        console.log(data)
         if (data) {
             router.push({ path: data })
         }
