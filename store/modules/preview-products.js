@@ -18,8 +18,8 @@ export const usePreviewProducts = defineStore('preview-products', {
         async GET_Info() {
             try {
                 const { data } = await useFetchApi('/api/preview-products')
-                this.info[0] = data.value.title
-                this.info[1] = data.value.btn
+                this.info.title = data.value.title
+                this.info.btn = data.value.btn
             } catch (event) {
                 console.log(event, 'error GET_Info - preview-products)')
             }

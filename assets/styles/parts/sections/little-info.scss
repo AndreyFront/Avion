@@ -1,0 +1,45 @@
+.little-info {
+    padding: 60px 0;
+    color: $white;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+        min-height: 478px;
+    }
+
+    &__wrap-info,
+    &__wrap-image {
+        height: 100%;
+    }
+
+    &__title {}
+
+    &__desc {
+        font-size: 18px;
+        line-height: 1.35em;
+    }
+
+    &__wrap-info {
+        display: grid;
+        align-content: space-between;
+        grid-row-gap: 70px;
+        padding: 64px;
+        background-color: $dark-primary;
+    }
+
+    &__block-info {
+        display: grid;
+        grid-row-gap: 12px;
+    }
+
+    &__wrap-image {}
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

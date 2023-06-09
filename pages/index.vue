@@ -3,6 +3,7 @@
         <v-performance />
         <v-advantages />
         <v-preview-products />
+        <v-little-info />
     </main>
 </template>
 

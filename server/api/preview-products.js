@@ -1,9 +1,9 @@
 export default defineEventHandler((event) => {
     return {
-        title: 'You might also like',
+        title: '',
         btn: {
             name: 'View collection',
-            link: '#',
+            link: '/ui',
         },
         cards: [
             {
