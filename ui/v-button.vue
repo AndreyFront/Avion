@@ -3,7 +3,7 @@
     <slot name="icon"></slot>
     <span class="btn__name">{{ name }}</span>
   </a>
-  <button v-else class="btn" :class="modifier" @click.prevent="$emit('clickButton')">
+  <button v-else class="btn" :class="modifier" @click="$emit('clickButton')">
     <slot name="icon"></slot>
     <span class="btn__name">{{ name }}</span>
   </button>

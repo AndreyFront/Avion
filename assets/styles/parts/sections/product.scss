@@ -1,0 +1,122 @@
+.product {
+    padding: 50px 0;
+    background-color: $light-gray;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        grid-column-gap: 65px;
+    }
+
+    .counter {
+        margin-top: 12px;
+    }
+
+    &__block-image {
+        height: 661px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    &__block-info {
+        padding: 40px 0;
+    }
+
+    &__block-head {
+        display: grid;
+        grid-row-gap: 16px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid $border-gray;
+    }
+
+    &__title {}
+
+    &__price {
+        font-size: 24px;
+    }
+
+    &__block-desc {
+        display: grid;
+        grid-row-gap: 14px;
+        margin-top: 24px;
+    }
+
+    &__info-title {
+        font-family: $secon-font, sans-serif;
+    }
+
+    &__desc {
+        line-height: 1.4em;
+    }
+
+    &__block-dimensions {
+        display: grid;
+        grid-row-gap: 24px;
+        margin-top: 36px;   
+    }
+
+    &__list-dimensions {
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        justify-content: start;
+    }
+
+    &__li-dimensions {
+        position: relative;
+        display: grid;
+        grid-row-gap: 15px;
+        text-align: center;
+
+        &:first-child,
+        &:not(:first-child):not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 44px;
+                background-color: $border-gray;
+            }
+        }
+
+        &:first-child {
+            padding-right: 49px;
+        }
+
+        &:last-child {
+            padding-left: 49px;
+        }
+
+        &:not(:first-child):not(:last-child) {
+            padding: 0 49px;
+        }
+    }
+
+    &__name-dimensions {
+        font-family: $secon-font, sans-serif;
+        font-size: 14px;
+    }
+
+    &__size-dimensions {}
+
+    &__block-quantitity {
+        margin-top: 40px;
+    }
+
+    &__block-btns {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        grid-column-gap: 16px;
+        margin-top: 48px;
+    }
+}

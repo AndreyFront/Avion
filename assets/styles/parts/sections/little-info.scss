@@ -6,12 +6,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 16px;
-        min-height: 478px;
+        height: 478px;
     }
 
     &__wrap-info,
     &__wrap-image {
-        height: 100%;
+        height: inherit;
     }
 
     &__title {}

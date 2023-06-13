@@ -1,0 +1,28 @@
+.input-mailing {
+    display: grid;
+    height: 56px;
+    grid-template-columns: minmax(150px, 354px) 118px;
+
+    .btn,
+    &__input {
+        height: inherit;
+    }
+
+    &__input {
+        padding: 0 32px;
+        background-color: $light-gray;
+        outline: none;
+        border: 1px solid;
+        border-color: $white;
+        transition: border-color $transition-time, color $transition-time;
+
+        &--error {
+            border-color: $error;
+            color: $error;
+        }
+
+        &::placeholder {
+            color: rgba(42, 37, 75, 0.2);
+        }
+    }
+}

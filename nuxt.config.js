@@ -23,5 +23,8 @@ export default defineNuxtConfig({
         autoImports: [
             'defineStore'
         ]
+    },
+    build: {
+        transpile: ['vee-validate']
     }
 })

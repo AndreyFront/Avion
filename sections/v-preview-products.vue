@@ -1,13 +1,13 @@
 <template>
     <section class="preview-products">
         <div class="container">
-            <v-title type-title="h2" modifiers="title--h2" class="preview-products__title">{{ info.title }}</v-title>
+            <v-title type-title="h2" modifiers="title--h2" class="preview-products__title">{{ title }}</v-title>
             <v-products :cards="cards" />
             <v-button 
                 class="preview-products__btn"
                 modifier="btn--size--bg btn--theme--secondary" 
-                :link="info.btn.link" 
-                :name="info.btn.name" 
+                :link="button.link" 
+                :name="button.name" 
                 @clickButton="getDataButton"
             >
             </v-button>
@@ -19,12 +19,17 @@
     import { usePreviewProducts } from '@/store/modules/preview-products'
 
     const store = usePreviewProducts(),
+    props = defineProps({
+        title: String,
+        button: Object,
+        params: {
+            type: Object,
+            default: undefined
+        }
+    }),
     router = useRouter(),
     cards = computed(() => {
         return store.getCards
-    }),
-    info = computed(() => {
-        return store.getInfo
     }),
     getDataButton = (data) => {
         if (data) {
@@ -32,6 +37,5 @@
         }
     }
 
-    store.GET_Cards()
-    store.GET_Info()
+    store.GET_Cards(props.params)
 </script>

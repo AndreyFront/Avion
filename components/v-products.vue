@@ -1,6 +1,6 @@
 <template>
     <div class="products">
-        <v-product
+        <v-product-card
             v-for="card in cards"
             :id="card.id"
             :link="card.link"

@@ -2,9 +2,17 @@
     <main class="page main-page">
         <v-performance />
         <v-advantages />
-        <v-preview-products />
+        <v-preview-products 
+            :button="previewProductsButton"
+        />
         <v-little-info />
+        <v-mailing />
     </main>
 </template>
 
-<script setup></script>
+<script setup>
+    const previewProductsButton = {
+        link: '/ui',
+        name: 'View collection'
+    }
+</script>

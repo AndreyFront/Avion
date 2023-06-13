@@ -1,0 +1,67 @@
+.counter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 122px;
+    height: 46px;
+    border: 1px solid $white;
+    background-color: $white;
+
+    &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__input,
+    &__btn {
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    &__input {
+        width: 40%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        transition: color $transition-time;
+
+        &[type="number"]::-webkit-outer-spin-button,
+        &[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    
+        &[type="number"] {
+            -moz-appearance: textfield;
+        }
+        &[type="number"]:hover,
+        &[type="number"]:focus {
+            -moz-appearance: number-input;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        cursor: pointer;
+        color: $border-gray;
+        transition: color $transition-time;
+
+        &:hover {
+            color: $primary;
+        }
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
