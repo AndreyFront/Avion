@@ -1,1 +1,13 @@
-.cart-page {}
+.cart-page {
+    background-color: $light-gray;
+
+    .container {
+        padding-top: 84px;
+        padding-bottom: 84px;
+    }
+
+    &__wrap-content {
+        background-color: $white;
+        padding: 54px 62px;
+    }
+}
