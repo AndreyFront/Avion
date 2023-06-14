@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link class="product-card" :to="link">
+    <nuxt-link class="product-card" :to="`/product/${id}`">
         <div class="product-card__block-image">
             <img :src="image.src" class="product-card__image" :alt="image.alt">
         </div>
@@ -14,8 +14,8 @@
     const props = defineProps({
         price: Number,
         image: Object,
-        link: {
-            type: String,
+        id: {
+            type: Number,
             required: true
         },
         name: {

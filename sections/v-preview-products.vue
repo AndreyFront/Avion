@@ -38,4 +38,8 @@
     }
 
     store.GET_Cards(props.params)
+
+    onUpdated(() => {
+        store.GET_Cards(props.params)
+    })
 </script>

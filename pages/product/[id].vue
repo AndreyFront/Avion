@@ -24,6 +24,6 @@
         category: ''
     }),
     getProductData = (data) => {
-        paramsPreviewProducts.value.category = data.category
+        paramsPreviewProducts.value.category = data?.category
     }
 </script>

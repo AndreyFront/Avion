@@ -3,7 +3,6 @@
         <v-product-card
             v-for="card in cards"
             :id="card.id"
-            :link="card.link"
             :name="card.name"
             :price="card.price"
             :image="card.image"

@@ -16,9 +16,9 @@
                 <div class="product__block-dimensions">
                     <span class="product__info-title">Dimensions</span>
                     <ul class="product__list-dimensions list-reset">
-                        <li class="product__li-dimensions" v-for="dimension in data?.dimensions" :key="dimension.id">
-                            <span class="product__name-dimensions">{{ dimension.name }}</span>
-                            <span class="product__size-dimensions">{{ dimension.value }}cm</span>
+                        <li class="product__li-dimensions" v-for="dimension in data?.dimensions" :key="dimension?.id">
+                            <span class="product__name-dimensions">{{ dimension?.name }}</span>
+                            <span class="product__size-dimensions">{{ dimension?.value }}cm</span>
                         </li>
                     </ul>
                 </div>
@@ -27,7 +27,7 @@
                     <v-counter @quantity="getQuantity" />
                 </div>
                 <div class="product__block-btns">
-                    <v-button modifier="btn--size--bg btn--theme--primary" name="Add to cart" @clickButton="getDataButton"></v-button>
+                    <v-button modifier="btn--size--bg btn--theme--primary" name="Add to cart" @click="addCart" @clickButton="getDataButton"></v-button>
                     <v-button modifier="btn--size--bg btn--theme--white" name="Save to favorites" @clickButton="getDataButton"></v-button>
                 </div>
             </div>
@@ -37,25 +37,32 @@
 
 <script setup>
     import { useProduct } from '@/store/modules/product'
+    import { useCart } from '@/store/modules/cart'
 
     const emit = defineEmits(['productData']),
-    store = useProduct(),
+    storeProduct = useProduct(),
+    storeCart = useCart(),
     props = defineProps({
         id: {
-            type: Number,
+            type: String,
             required: true
         }
     }),
     data = computed(() => {
-        emit('productData', store.getData[0])
-        return store.getData[0]
-    })
+        emit('productData', storeProduct.getData[0])
+        return storeProduct.getData[0]
+    }),
+    quantity = ref(1)
 
-    store.GET_Data(props.id)
+    storeProduct.GET_Data(props.id)
+
+    function addCart() {
+        storeCart.GET_Products(storeProduct.getData[0], quantity.value)
+    }
 
     function getDataButton() {}
 
-    function getQuantity(quantity) {
-        // console.log(quantity)
+    function getQuantity(valueQuantity) {
+        quantity.value = valueQuantity
     }
 </script>

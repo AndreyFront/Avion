@@ -36,7 +36,7 @@
                 </nuxt-link>
                 <nuxt-link to="" class="header__link">
                     <IconCart class="header__link-icon" />
-                    <span>2</span>
+                    <span v-if="storeCart.getCart.length">{{ storeCart.getCart.length }}</span>
                 </nuxt-link>
                 <nuxt-link to="" class="header__link">
                     <IconUserAvatar class="header__link-icon" />
@@ -46,4 +46,8 @@
     </header>
 </template>
 
-<script setup></script>
+<script setup>
+    import { useCart } from '@/store/modules/cart'
+
+    const storeCart = useCart()
+</script>
